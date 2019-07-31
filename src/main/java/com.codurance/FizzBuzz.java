@@ -1,7 +1,7 @@
 package com.codurance;
 
 public class FizzBuzz {
-    public String excecute(Integer[] numbers) {
+    public String execute(Integer[] numbers) {
         return "1";
     }
 }
