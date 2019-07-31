@@ -24,7 +24,8 @@ public class FizzBuzzShould {
         return Stream.of(
                 Arguments.of(new Integer[]{1}, "1"),
                 Arguments.of(new Integer[]{2}, "2"),
-                Arguments.of(new Integer[]{4}, "4")
+                Arguments.of(new Integer[]{4}, "4"),
+                Arguments.of(new Integer[]{3}, "Fizz")
         );
     }
 }
