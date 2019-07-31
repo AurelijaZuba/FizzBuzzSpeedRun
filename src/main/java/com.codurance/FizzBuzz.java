@@ -5,7 +5,7 @@ public class FizzBuzz {
         final Integer number = numbers[0];
         if (isFizz(number))
             return "Fizz";
-        if (number == 5)
+        if (number == 5 || number == 10)
             return "Buzz";
         return number.toString();
     }
