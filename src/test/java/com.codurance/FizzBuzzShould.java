@@ -27,7 +27,8 @@ public class FizzBuzzShould {
                 Arguments.of(new Integer[]{4}, "4"),
                 Arguments.of(new Integer[]{3}, "Fizz"),
                 Arguments.of(new Integer[]{6}, "Fizz"),
-                Arguments.of(new Integer[]{9}, "Fizz")
+                Arguments.of(new Integer[]{9}, "Fizz"),
+                Arguments.of(new Integer[]{5}, "Buzz")
         );
     }
 }
