@@ -7,6 +7,10 @@ public class FizzBuzz {
 
     public String execute(Integer[] numbers) {
         final Integer number = numbers[0];
+        return processNumber(number);
+    }
+
+    private String processNumber(Integer number) {
         if(number == 15)
             return FIZZ + BUZZ;
         if (isFizz(number))
