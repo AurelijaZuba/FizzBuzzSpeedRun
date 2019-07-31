@@ -21,7 +21,7 @@ public class FizzBuzz {
     }
 
     private boolean isFizzBuzz(Integer number) {
-        return number == 15 || number == 30;
+        return isFizz(number) && isBuzz(number);
     }
 
     private boolean isBuzz(Integer number) {
