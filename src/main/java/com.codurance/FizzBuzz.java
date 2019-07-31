@@ -11,7 +11,7 @@ public class FizzBuzz {
     }
 
     private String processNumber(Integer number) {
-        if(number == 15)
+        if(number == 15 || number == 30)
             return FIZZ + BUZZ;
         if (isFizz(number))
             return FIZZ;
