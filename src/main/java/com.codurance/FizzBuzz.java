@@ -1,14 +1,18 @@
 package com.codurance;
 
 public class FizzBuzz {
+
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
+
     public String execute(Integer[] numbers) {
         final Integer number = numbers[0];
         if(number == 15)
-            return "FizzBuzz";
+            return FIZZ + BUZZ;
         if (isFizz(number))
-            return "Fizz";
+            return FIZZ;
         if (isBuzz(number))
-            return "Buzz";
+            return BUZZ;
         return number.toString();
     }
 
