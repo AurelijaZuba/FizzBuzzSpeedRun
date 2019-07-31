@@ -1,38 +1,30 @@
 package com.codurance;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzShould {
-
-    @Test
-    void return_string_of_one_when_given_integer_of_one() {
+    @ParameterizedTest
+    @MethodSource("fizzBuzzIntArrays")
+    public void returns_fizzbuzz_string_from_int_array(Integer[] numbers, String expected) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        Integer[] numbers = {1};
         String actual = fizzBuzz.execute(numbers);
 
-        String expected = "1";
         assertThat(actual).isEqualTo(expected);
     }
 
-    @Test
-    void return_string_of_two_when_given_integer_of_two() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        Integer[] numbers = {2};
-        String actual = fizzBuzz.execute(numbers);
-
-        String expected = "2";
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void return_string_of_four_when_given_integer_of_four() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        Integer[] numbers = {4};
-        String actual = fizzBuzz.execute(numbers);
-
-        String expected = "4";
-        assertThat(actual).isEqualTo(expected);
+    private static Stream<Arguments> fizzBuzzIntArrays() {
+        return Stream.of(
+                Arguments.of(new Integer[]{1}, "1"),
+                Arguments.of(new Integer[]{2}, "2"),
+                Arguments.of(new Integer[]{4}, "4")
+        );
     }
 }
