@@ -25,4 +25,14 @@ public class FizzBuzzShould {
         String expected = "2";
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    void return_string_of_four_when_given_integer_of_four() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        Integer[] numbers = {4};
+        String actual = fizzBuzz.execute(numbers);
+
+        String expected = "4";
+        assertThat(actual).isEqualTo(expected);
+    }
 }
