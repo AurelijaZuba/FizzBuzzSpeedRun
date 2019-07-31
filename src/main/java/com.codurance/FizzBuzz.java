@@ -11,13 +11,17 @@ public class FizzBuzz {
     }
 
     private String processNumber(Integer number) {
-        if(number == 15 || number == 30)
+        if(isFizzBuzz(number))
             return FIZZ + BUZZ;
         if (isFizz(number))
             return FIZZ;
         if (isBuzz(number))
             return BUZZ;
         return number.toString();
+    }
+
+    private boolean isFizzBuzz(Integer number) {
+        return number == 15 || number == 30;
     }
 
     private boolean isBuzz(Integer number) {
