@@ -5,9 +5,13 @@ public class FizzBuzz {
         final Integer number = numbers[0];
         if (isFizz(number))
             return "Fizz";
-        if (number == 5 || number == 10)
+        if (isBuzz(number))
             return "Buzz";
         return number.toString();
+    }
+
+    private boolean isBuzz(Integer number) {
+        return number == 5 || number == 10;
     }
 
     private boolean isFizz(Integer number) {
